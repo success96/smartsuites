@@ -2,18 +2,18 @@
   "name": "smartsuite",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "start": "node server.js",
-    "build": "prisma generate --schema=./database/prisma/schema.prisma && npm run start"
+    "dev": "nodemon api/index.js",
+    "start": "node api/index.js",
+    "build": "npx prisma generate --schema=./api/database/prisma/schema.prisma && npm run start"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^5.16.1",
+    "@prisma/client": "^5.16.2",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "chai-http": "^5.0.0",
@@ -23,7 +23,7 @@
     "http-status": "^1.7.4",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "prisma": "^5.16.1"
+    "prisma": "^5.16.2"
   },
   "devDependencies": {
     "chai": "^5.1.1",
